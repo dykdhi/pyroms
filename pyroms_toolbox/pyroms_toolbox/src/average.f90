@@ -1,4 +1,3 @@
-C File avgerage.f90
       subroutine avg3d(avg,dataset,incavg,counter,spval,dim1,dim2,dim3)
 
       IMPLICIT NONE
