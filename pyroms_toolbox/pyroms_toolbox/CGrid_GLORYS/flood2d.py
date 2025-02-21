@@ -3,7 +3,7 @@
 import numpy as np
 #from pyroms import _remapping
 
-import creep
+import _creep
 
 def flood2d(varz, Cgrd, Cpos='t', irange=None, jrange=None, \
           spval=-9.99e+33, dmax=0):

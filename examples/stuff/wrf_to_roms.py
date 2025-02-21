@@ -11,7 +11,7 @@ from scipy.interpolate import interp2d
 import pyroms
 import pyroms_toolbox
 from bathy_smoother import *
-import creep
+import _creep
 
 # For converting a WRF grid to a ROMS grid.
 # WRF is more restrictive in the grids it can handle, plus
