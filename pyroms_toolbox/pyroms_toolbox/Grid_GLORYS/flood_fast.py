@@ -5,7 +5,7 @@ import _remapping_fast
 
 import pyroms
 
-import _creep
+import _creeping_sea
 
 def flood_fast(varz, grd, irange=None, jrange=None, \
           spval=1.2676506e+30, cdepth=0, kk=0):
