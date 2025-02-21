@@ -10,7 +10,7 @@ from datetime import datetime
 from scipy import interpolate
 
 import pyroms
-from . import _interp
+import _interp
 
 
 def get_lonlat(iindex, jindex, grd, Cpos='rho'):
