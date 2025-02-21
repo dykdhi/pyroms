@@ -1,5 +1,5 @@
 import os
-from pyroms import _iso
+import _iso
 import numpy as np
 from mpl_toolkits.basemap import Basemap, shiftgrid
 from scipy.interpolate import griddata

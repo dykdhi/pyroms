@@ -4,7 +4,7 @@ import numpy as np
 import _remapping
 
 import pyroms
-from pyroms import _remapping
+import _remapping
 
 
 def flood(varz, grdz, Cpos='rho', irange=None, jrange=None, \

@@ -11,7 +11,7 @@ from matplotlib.dates import date2num, num2date
 
 import pyroms
 import pyroms_toolbox
-from pyroms import _remapping
+import _remapping
 import xarray as xr
 import xesmf
 from regrid_Hill import regrid_Hill
