@@ -1,7 +1,7 @@
 # encoding: utf-8
 
 import numpy as np
-from .. import _remapping
+import _remapping
 
 import pyroms
 from pyroms import _remapping
