@@ -336,9 +336,9 @@ def Neighborhood(MSK, iEta, iXi, Kdist):
 
     eta_rho, xi_rho = MSK.shape
     MaxSiz = (2 * Kdist + 1) * (2 * Kdist + 1)
-    ListNeigh = np.zeros((MaxSiz,2), dtype=np.int)
-    ListStatus = -1 * np.ones((MaxSiz,1), dtype=np.int)
-    ListKeys = np.zeros((MaxSiz,1), dtype=np.int)
+    ListNeigh = np.zeros((MaxSiz,2), dtype=int)
+    ListStatus = -1 * np.ones((MaxSiz,1), dtype=int)
+    ListKeys = np.zeros((MaxSiz,1), dtype=int)
 
     eKey = iEta + (eta_rho+1) * iXi
     ListNeigh[0,0] = iEta
@@ -386,8 +386,8 @@ def ConnectedComponent(ListEdges, nbVert):
     """
 
     nbEdge = np.size(ListEdges, 0)
-    ListDegree = np.zeros((nbVert,1), dtype=np.int)
-    ListAdjacency = np.zeros((nbVert,10000), dtype=np.int)
+    ListDegree = np.zeros((nbVert,1), dtype=int)
+    ListAdjacency = np.zeros((nbVert,10000), dtype=int)
 
     for iEdge in range(nbEdge):
         eVert = ListEdges[iEdge,0]

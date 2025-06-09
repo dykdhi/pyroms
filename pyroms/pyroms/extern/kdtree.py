@@ -35,8 +35,8 @@ class Rectangle(object):
     """
     def __init__(self, maxes, mins):
         """Construct a hyperrectangle."""
-        self.maxes = np.maximum(maxes,mins).astype(np.float)
-        self.mins = np.minimum(maxes,mins).astype(np.float)
+        self.maxes = np.maximum(maxes,mins).astype(np.float64)
+        self.mins = np.minimum(maxes,mins).astype(np.float64)
         self.m, = self.maxes.shape
 
     def __repr__(self):
@@ -320,14 +320,14 @@ class KDTree(object):
         retshape = np.shape(x)[:-1]
         if retshape!=():
             if k>1:
-                dd = np.empty(retshape+(k,),dtype=np.float)
+                dd = np.empty(retshape+(k,),dtype=np.float64)
                 dd.fill(np.inf)
-                ii = np.empty(retshape+(k,),dtype=np.int)
+                ii = np.empty(retshape+(k,),dtype=int)
                 ii.fill(self.n)
             elif k==1:
-                dd = np.empty(retshape,dtype=np.float)
+                dd = np.empty(retshape,dtype=np.float64)
                 dd.fill(np.inf)
-                ii = np.empty(retshape,dtype=np.int)
+                ii = np.empty(retshape,dtype=int)
                 ii.fill(self.n)
             elif k is None:
                 dd = np.empty(retshape,dtype=np.object)
@@ -357,9 +357,9 @@ class KDTree(object):
                 else:
                     return np.inf, self.n
             elif k>1:
-                dd = np.empty(k,dtype=np.float)
+                dd = np.empty(k,dtype=np.float64)
                 dd.fill(np.inf)
-                ii = np.empty(k,dtype=np.int)
+                ii = np.empty(k,dtype=int)
                 ii.fill(self.n)
                 for j in range(len(hits)):
                     dd[j], ii[j] = hits[j]
@@ -669,7 +669,7 @@ def distance_matrix(x,y,p=2,threshold=1000000):
     if m*n*k <= threshold:
         return minkowski_distance(x[:,np.newaxis,:],y[np.newaxis,:,:],p)
     else:
-        result = np.empty((m,n),dtype=np.float) #FIXME: figure out the best dtype
+        result = np.empty((m,n),dtype=np.float64) #FIXME: figure out the best dtype
         if m<n:
             for i in range(m):
                 result[i,:] = minkowski_distance(x[i],y,p)

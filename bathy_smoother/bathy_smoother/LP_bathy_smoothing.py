@@ -123,7 +123,7 @@ def LP_smoothing_rx0_heuristic(MSK, Hobs, rx0max, SignConst, AmpConst):
 
     Kbad = np.where(MSKbad == 1)
     nbKbad = np.size(Kbad,1)
-    ListIdx = np.zeros((eta_rho,xi_rho), dtype=np.int)
+    ListIdx = np.zeros((eta_rho,xi_rho), dtype=int)
     ListIdx[Kbad] = list(range(nbKbad))
 
     ListEdges = []
